@@ -4,7 +4,6 @@ from ray.tune.registry import register_env
 from ray.rllib.models import ModelCatalog
 from env import SolitaireEnv
 from model import SolitaireModel
-from utility.sms import send_message
 
 ray.init(local_mode=True)
 register_env('solitaire_env', lambda _: SolitaireEnv({}))
